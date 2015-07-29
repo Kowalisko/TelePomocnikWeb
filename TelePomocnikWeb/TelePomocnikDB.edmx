@@ -371,8 +371,8 @@
             <End Role="Contact" EntitySet="Contact" />
           </AssociationSet>
           <AssociationSet Name="FK_Telemarketer_Telemarketer" Association="TelePomocnikDbModel.FK_Telemarketer_Telemarketer">
-            <End Role="Telemarketer" EntitySet="Telemarketer" />
-            <End Role="Telemarketer1" EntitySet="Telemarketer" />
+            <End EntitySet="Telemarketer" Role="Telemarketer" />
+            <End EntitySet="Telemarketer" Role="Telemarketer1" />
           </AssociationSet>
           <EntitySet Name="Attachment" EntityType="TelePomocnikDbModel.Attachment" />
           <EntitySet Name="MustCallInformation" EntityType="TelePomocnikDbModel.MustCallInformation" />
@@ -558,8 +558,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Telemarketer_Telemarketer">
-          <End Type="TelePomocnikDbModel.Telemarketer" Role="Telemarketer" Multiplicity="1" />
-          <End Type="TelePomocnikDbModel.Telemarketer" Role="Telemarketer1" Multiplicity="*" />
+          <End Type="TelePomocnikDbModel.Telemarketer" Multiplicity="1" Role="Telemarketer" />
+          <End Type="TelePomocnikDbModel.Telemarketer" Multiplicity="*" Role="Telemarketer1" />
           <ReferentialConstraint>
             <Principal Role="Telemarketer">
               <PropertyRef Name="Id" />

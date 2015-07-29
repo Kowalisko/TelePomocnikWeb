@@ -12,7 +12,14 @@ namespace TelePomocnikWeb.Controllers
         {
             TelePomocnikDbEntities1 db = new TelePomocnikDbEntities1();
             var informations = db.MustCallInformation.ToList();
-            return Json(informations, JsonRequestBehavior.AllowGet);
+            var info = "";
+
+            foreach (var item in informations)
+	        {
+                info += item.DateMustContact + ": " + item.Telemarketer.Name + " " + item.Telemarketer.Surname + " do " + item.Contact.Name + " " + item.Contact.Surname + " z informacją: " + item.Information + Environment.NewLine;
+	        }
+
+            return Json(info, JsonRequestBehavior.AllowGet);
         }
     }
 }
