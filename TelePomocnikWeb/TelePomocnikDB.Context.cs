@@ -28,9 +28,11 @@ namespace TelePomocnikWeb
         public DbSet<Company> Company { get; set; }
         public DbSet<Contact> Contact { get; set; }
         public DbSet<Event> Event { get; set; }
-        public DbSet<MustCallInformation> MustCallInformation { get; set; }
         public DbSet<Role> Role { get; set; }
         public DbSet<sysdiagrams> sysdiagrams { get; set; }
         public DbSet<Telemarketer> Telemarketer { get; set; }
+        public DbSet<ContactHistory> ContactHistory { get; set; }
+        public DbSet<Attachment> Attachment { get; set; }
+        public DbSet<MustCallInformation> MustCallInformation { get; set; }
     }
 }

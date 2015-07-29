@@ -14,6 +14,13 @@ namespace TelePomocnikWeb
     
     public partial class MustCallInformation
     {
+        public System.Guid Id { get; set; }
         public string Information { get; set; }
+        public System.DateTime DateMustContact { get; set; }
+        public System.Guid WhoMustContact { get; set; }
+        public System.Guid ToWhoMustContact { get; set; }
+    
+        public virtual Contact Contact { get; set; }
+        public virtual Telemarketer Telemarketer { get; set; }
     }
 }

@@ -25,7 +25,7 @@ namespace TelePomocnikWeb
         public string PostCode { get; set; }
         public string City { get; set; }
         public string Country { get; set; }
-        public System.Guid TelemarketerId { get; set; }
+        public Nullable<System.Guid> TelemarketerId { get; set; }
     
         public virtual Telemarketer Telemarketer { get; set; }
         public virtual ICollection<Contact> Contact { get; set; }
