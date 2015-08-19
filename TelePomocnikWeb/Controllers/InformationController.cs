@@ -20,7 +20,7 @@ namespace TelePomocnikWeb.Controllers
                 info +=  item.DateMustContact + ": " + item.Telemarketer.Name + " " + item.Telemarketer.Surname + " do " + item.Contact.Name + " " + item.Contact.Surname + " z informacją: " + item.Information + Environment.NewLine;
 	        }
 
-            return Json(info, JsonRequestBehavior.AllowGet);
+            return Json("dupa", JsonRequestBehavior.AllowGet);
         }
     }
 }
