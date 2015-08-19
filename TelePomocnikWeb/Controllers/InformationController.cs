@@ -11,14 +11,14 @@ namespace TelePomocnikWeb.Controllers
         public JsonResult GetInformations()
         {
             TelePomocnikDbEntities1 db = new TelePomocnikDbEntities1();
-            DateTime from = DateTime.Now.AddDays(-2);
-            var informations = db.MustCallInformation.ToList();
-            var info = "";
+            //DateTime from = DateTime.Now.AddDays(-2);
+            //var informations = db.MustCallInformation.ToList();
+            //var info = "";
 
-            foreach (var item in informations)
-	        {
-                info +=  item.DateMustContact + ": " + item.Telemarketer.Name + " " + item.Telemarketer.Surname + " do " + item.Contact.Name + " " + item.Contact.Surname + " z informacją: " + item.Information + Environment.NewLine;
-	        }
+            //foreach (var item in informations)
+            //{
+            //    info +=  item.DateMustContact + ": " + item.Telemarketer.Name + " " + item.Telemarketer.Surname + " do " + item.Contact.Name + " " + item.Contact.Surname + " z informacją: " + item.Information + Environment.NewLine;
+            //}
 
             return Json("dupa", JsonRequestBehavior.AllowGet);
         }
