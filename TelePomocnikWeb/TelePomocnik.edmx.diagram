@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="02e4af406b8248d882e52a18d5528c25" Name="Diagram1" ZoomLevel="78">
+        <EntityTypeShape EntityType="TelePomocnikDbModel.Company" Width="1.5" PointX="7.25" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TelePomocnikDbModel.Contact" Width="1.5" PointX="9.875" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TelePomocnikDbModel.Role" Width="1.5" PointX="5" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TelePomocnikDbModel.Telemarketer" Width="1.5" PointX="7.125" PointY="6.625" IsExpanded="true" />
+        <AssociationConnector Association="TelePomocnikDbModel.FK_Contact_Company" ManuallyRouted="false" />
+        <AssociationConnector Association="TelePomocnikDbModel.FK_Contact_Telemarketer" ManuallyRouted="false" />
+        <AssociationConnector ManuallyRouted="false" Association="TelePomocnikDbModel.FK_Telemarketer_Role" />
+        <EntityTypeShape EntityType="TelePomocnikDbModel.Event" Width="1.5" PointX="12.375" PointY="3.375" />
+        <EntityTypeShape EntityType="TelePomocnikDbModel.MustCallInformation" Width="1.5" PointX="12.75" PointY="6.875" />
+        <AssociationConnector Association="TelePomocnikDbModel.FK_MustCallInformation_Contact" />
+        <AssociationConnector Association="TelePomocnikDbModel.FK_MustCallInformation_Telemarketer" />
+        <AssociationConnector Association="TelePomocnikDbModel.FK_Company_Telemarketer1" />
+        <AssociationConnector Association="TelePomocnikDbModel.ContactTakePartEvent" />
+        <AssociationConnector Association="TelePomocnikDbModel.ContactInterestedInEvent" />
+        <EntityTypeShape EntityType="TelePomocnikDbModel.ContactHistory" Width="1.5" PointX="3.5" PointY="6.25" />
+        <AssociationConnector Association="TelePomocnikDbModel.FK_ContactHistory_Contact" />
+        <AssociationConnector Association="TelePomocnikDbModel.FK_ContactHistory_Telemarketer1" />
+        <AssociationConnector Association="TelePomocnikDbModel.FK_Telemarketer_Telemarketer" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

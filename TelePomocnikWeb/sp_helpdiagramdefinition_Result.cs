@@ -10,12 +10,10 @@
 namespace TelePomocnikWeb
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class Attachment
+    public partial class sp_helpdiagramdefinition_Result
     {
-        public System.Guid Id { get; set; }
-        public string Name { get; set; }
-        public byte[] PdfFile { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

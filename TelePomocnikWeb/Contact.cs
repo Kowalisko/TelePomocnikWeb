@@ -16,10 +16,10 @@ namespace TelePomocnikWeb
     {
         public Contact()
         {
-            this.ContactHistory = new HashSet<ContactHistory>();
-            this.Event1 = new HashSet<Event>();
-            this.Event11 = new HashSet<Event>();
             this.MustCallInformation = new HashSet<MustCallInformation>();
+            this.Event1 = new HashSet<Event>();
+            this.Event2 = new HashSet<Event>();
+            this.ContactHistory = new HashSet<ContactHistory>();
         }
     
         public System.Guid Id { get; set; }
@@ -32,16 +32,15 @@ namespace TelePomocnikWeb
         public string CommentSecond { get; set; }
         public System.DateTime DateContactAdd { get; set; }
         public Nullable<System.DateTime> DateLastContact { get; set; }
-        public Nullable<System.DateTime> DateWhenMustContact { get; set; }
         public Nullable<System.Guid> TelemarketerId { get; set; }
         public Nullable<System.Guid> CompanyId { get; set; }
         public string ColorString { get; set; }
     
-        public virtual Telemarketer Telemarketer { get; set; }
-        public virtual ICollection<ContactHistory> ContactHistory { get; set; }
-        public virtual ICollection<Event> Event1 { get; set; }
-        public virtual ICollection<Event> Event11 { get; set; }
         public virtual Company Company { get; set; }
+        public virtual Telemarketer Telemarketer { get; set; }
         public virtual ICollection<MustCallInformation> MustCallInformation { get; set; }
+        public virtual ICollection<Event> Event1 { get; set; }
+        public virtual ICollection<Event> Event2 { get; set; }
+        public virtual ICollection<ContactHistory> ContactHistory { get; set; }
     }
 }

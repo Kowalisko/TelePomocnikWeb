@@ -14,7 +14,14 @@ namespace TelePomocnikWeb
     
     public partial class Role
     {
+        public Role()
+        {
+            this.Telemarketer = new HashSet<Telemarketer>();
+        }
+    
         public System.Guid Id { get; set; }
         public string Name { get; set; }
+    
+        public virtual ICollection<Telemarketer> Telemarketer { get; set; }
     }
 }

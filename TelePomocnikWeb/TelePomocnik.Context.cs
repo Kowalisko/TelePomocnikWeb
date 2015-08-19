@@ -7,39 +7,31 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TelePomocnikWeb
+namespace Telepomocnik_DB
 {
     using System;
-    using System.Configuration;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Objects;
+    using System.Data.Objects.DataClasses;
+    using System.Linq;
+    using TelePomocnikWeb;
     
     public partial class TelePomocnikDbEntities1 : DbContext
     {
         public TelePomocnikDbEntities1()
             : base("name=TelePomocnikDbEntities1")
         {
-            Database.SetInitializer<TelePomocnikDbEntities1>(null);
-        }
-    
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            Database.SetInitializer<TelePomocnikDbEntities1>(new CreateDatabaseIfNotExists<TelePomocnikDbEntities1>());
-        }
-
-        public void Configurations()
-        {
-            Database.SetInitializer<TelePomocnikDbEntities1>(null);
         }
     
         public DbSet<Company> Company { get; set; }
         public DbSet<Contact> Contact { get; set; }
-        public DbSet<Event> Event { get; set; }
         public DbSet<Role> Role { get; set; }
-        public DbSet<sysdiagrams> sysdiagrams { get; set; }
         public DbSet<Telemarketer> Telemarketer { get; set; }
-        public DbSet<ContactHistory> ContactHistory { get; set; }
-        public DbSet<Attachment> Attachment { get; set; }
+        public DbSet<Event> Event { get; set; }
         public DbSet<MustCallInformation> MustCallInformation { get; set; }
+        public DbSet<ContactHistory> ContactHistory { get; set; }
+    
+        
     }
 }
