@@ -10,7 +10,7 @@ namespace TelePomocnikWeb.Controllers
     {
         public JsonResult GetInformations()
         {
-            TelePomocnikDbEntities1 db = new TelePomocnikDbEntities1();
+            TelePomocnikDbEntities db = new TelePomocnikDbEntities();
             DateTime from = DateTime.Now.AddDays(-2);
             var informations = db.MustCallInformation.ToList();
             var info = "";

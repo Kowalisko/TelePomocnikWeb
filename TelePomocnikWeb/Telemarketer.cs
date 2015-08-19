@@ -16,10 +16,10 @@ namespace TelePomocnikWeb
     {
         public Telemarketer()
         {
-            this.Contact = new HashSet<Contact>();
-            this.MustCallInformation = new HashSet<MustCallInformation>();
             this.Company = new HashSet<Company>();
-            this.ContactHistory1 = new HashSet<ContactHistory>();
+            this.Contact = new HashSet<Contact>();
+            this.ContactHistory = new HashSet<ContactHistory>();
+            this.MustCallInformation = new HashSet<MustCallInformation>();
             this.Telemarketer1 = new HashSet<Telemarketer>();
         }
     
@@ -32,11 +32,10 @@ namespace TelePomocnikWeb
         public string FullName { get; set; }
         public System.Guid ManagerId { get; set; }
     
-        public virtual ICollection<Contact> Contact { get; set; }
-        public virtual Role Role { get; set; }
-        public virtual ICollection<MustCallInformation> MustCallInformation { get; set; }
         public virtual ICollection<Company> Company { get; set; }
-        public virtual ICollection<ContactHistory> ContactHistory1 { get; set; }
+        public virtual ICollection<Contact> Contact { get; set; }
+        public virtual ICollection<ContactHistory> ContactHistory { get; set; }
+        public virtual ICollection<MustCallInformation> MustCallInformation { get; set; }
         public virtual ICollection<Telemarketer> Telemarketer1 { get; set; }
         public virtual Telemarketer Telemarketer2 { get; set; }
     }

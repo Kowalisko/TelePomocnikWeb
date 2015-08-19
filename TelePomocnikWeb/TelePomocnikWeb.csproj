@@ -153,57 +153,55 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Company.cs">
-      <DependentUpon>TelePomocnik.tt</DependentUpon>
+      <DependentUpon>TelePomocnikDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Contact.cs">
-      <DependentUpon>TelePomocnik.tt</DependentUpon>
+      <DependentUpon>TelePomocnikDB.tt</DependentUpon>
     </Compile>
     <Compile Include="ContactHistory.cs">
-      <DependentUpon>TelePomocnik.tt</DependentUpon>
+      <DependentUpon>TelePomocnikDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\InformationController.cs" />
     <Compile Include="Event.cs">
-      <DependentUpon>TelePomocnik.tt</DependentUpon>
+      <DependentUpon>TelePomocnikDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="MustCallInformation.cs">
-      <DependentUpon>TelePomocnik.tt</DependentUpon>
+      <DependentUpon>TelePomocnikDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Role.cs">
-      <DependentUpon>TelePomocnik.tt</DependentUpon>
+      <DependentUpon>TelePomocnikDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>TelePomocnik.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sp_helpdiagrams_Result.cs">
-      <DependentUpon>TelePomocnik.tt</DependentUpon>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>TelePomocnikDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Telemarketer.cs">
-      <DependentUpon>TelePomocnik.tt</DependentUpon>
+      <DependentUpon>TelePomocnikDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="TelePomocnik.Context.cs" />
-    <Compile Include="TelePomocnik.Context1.cs">
+    <Compile Include="TelePomocnikDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>TelePomocnik.Context.tt</DependentUpon>
+      <DependentUpon>TelePomocnikDB.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="TelePomocnik.cs" />
-    <Compile Include="TelePomocnik.Designer.cs" />
-    <Compile Include="TelePomocnik1.cs">
+    <Compile Include="TelePomocnikDB.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>TelePomocnik.tt</DependentUpon>
+      <DependentUpon>TelePomocnikDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="TelePomocnik1.Designer.cs">
+    <Compile Include="TelePomocnikDB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>TelePomocnik.edmx</DependentUpon>
+      <DependentUpon>TelePomocnikDB.edmx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\TelePomocnikDb.mdf" />
+    <Content Include="App_Data\TelePomocnikDb_log.ldf">
+      <DependentUpon>TelePomocnikDb.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -275,7 +273,6 @@
     <Content Include="Scripts\knockout-2.2.0.debug.js" />
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="TelePomocnik.edmx.sql" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -302,22 +299,25 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="TelePomocnik.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>TelePomocnik.Context1.cs</LastGenOutput>
-    </Content>
-    <EntityDeploy Include="TelePomocnik.edmx">
+    <EntityDeploy Include="TelePomocnikDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>TelePomocnik1.Designer.cs</LastGenOutput>
+      <LastGenOutput>TelePomocnikDB.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="TelePomocnik.edmx.diagram" />
-    <Content Include="TelePomocnik.tt">
+    <Content Include="TelePomocnikDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>TelePomocnik1.cs</LastGenOutput>
+      <DependentUpon>TelePomocnikDB.edmx</DependentUpon>
+      <LastGenOutput>TelePomocnikDB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="TelePomocnikDB.edmx.diagram">
+      <DependentUpon>TelePomocnikDB.edmx</DependentUpon>
+    </Content>
+    <Content Include="TelePomocnikDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TelePomocnikDB.edmx</DependentUpon>
+      <LastGenOutput>TelePomocnikDB.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Areas\" />
     <Folder Include="Models\" />
   </ItemGroup>

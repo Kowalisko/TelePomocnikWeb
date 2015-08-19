@@ -27,7 +27,7 @@ namespace TelePomocnikWeb
         public string Country { get; set; }
         public Nullable<System.Guid> TelemarketerId { get; set; }
     
-        public virtual ICollection<Contact> Contact { get; set; }
         public virtual Telemarketer Telemarketer { get; set; }
+        public virtual ICollection<Contact> Contact { get; set; }
     }
 }

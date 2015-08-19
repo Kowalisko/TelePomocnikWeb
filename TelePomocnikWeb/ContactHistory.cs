@@ -21,6 +21,6 @@ namespace TelePomocnikWeb
         public System.Guid TelemarketerId { get; set; }
     
         public virtual Contact Contact { get; set; }
-        public virtual Telemarketer Telemarketer1 { get; set; }
+        public virtual Telemarketer Telemarketer { get; set; }
     }
 }
