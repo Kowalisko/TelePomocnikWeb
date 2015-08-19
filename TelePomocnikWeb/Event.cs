@@ -16,8 +16,8 @@ namespace TelePomocnikWeb
     {
         public Event()
         {
+            this.Contact = new HashSet<Contact>();
             this.Contact1 = new HashSet<Contact>();
-            this.Contact11 = new HashSet<Contact>();
         }
     
         public System.Guid Id { get; set; }
@@ -29,7 +29,7 @@ namespace TelePomocnikWeb
         public string MoreInfo { get; set; }
         public string Place { get; set; }
     
+        public virtual ICollection<Contact> Contact { get; set; }
         public virtual ICollection<Contact> Contact1 { get; set; }
-        public virtual ICollection<Contact> Contact11 { get; set; }
     }
 }

@@ -10,17 +10,17 @@ namespace TelePomocnikWeb.Controllers
     {
         public JsonResult GetInformations()
         {
-            TelePomocnikDbEntities1 db = new TelePomocnikDbEntities1();
-            DateTime from = DateTime.Now.AddDays(-2);
-            var informations = db.MustCallInformation.Where(m => m.DateMustContact > from).ToList();
-            var info = "";
+            //TelePomocnikDbEntities2 db = new TelePomocnikDbEntities2();
+            //DateTime from = DateTime.Now.AddDays(-2);
+            //var informations = db.MustCallInformation.ToList();
+            //var info = "";
 
-            foreach (var item in informations)
-	        {
-                info += item.DateMustContact + ": " + item.Telemarketer.Name + " " + item.Telemarketer.Surname + " do " + item.Contact.Name + " " + item.Contact.Surname + " z informacją: " + item.Information + Environment.NewLine;
-	        }
+            //foreach (var item in informations)
+            //{
+            //    info += item.DateMustContact + ": " + item.Telemarketer.Name + " " + item.Telemarketer.Surname + " do " + item.Contact.Name + " " + item.Contact.Surname + " z informacją: " + item.Information + Environment.NewLine;
+            //}
 
-            return Json(info, JsonRequestBehavior.AllowGet);
+            return Json("abc", JsonRequestBehavior.AllowGet);
         }
     }
 }

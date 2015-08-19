@@ -10,7 +10,6 @@
 namespace TelePomocnikWeb
 {
     using System;
-    using System.Configuration;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
@@ -19,27 +18,20 @@ namespace TelePomocnikWeb
         public TelePomocnikDbEntities1()
             : base("name=TelePomocnikDbEntities1")
         {
-            Database.SetInitializer<TelePomocnikDbEntities1>(null);
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            Database.SetInitializer<TelePomocnikDbEntities1>(new CreateDatabaseIfNotExists<TelePomocnikDbEntities1>());
-        }
-
-        public void Configurations()
-        {
-            Database.SetInitializer<TelePomocnikDbEntities1>(null);
+            throw new UnintentionalCodeFirstException();
         }
     
         public DbSet<Company> Company { get; set; }
         public DbSet<Contact> Contact { get; set; }
+        public DbSet<ContactHistory> ContactHistory { get; set; }
         public DbSet<Event> Event { get; set; }
+        public DbSet<MustCallInformation> MustCallInformation { get; set; }
         public DbSet<Role> Role { get; set; }
         public DbSet<sysdiagrams> sysdiagrams { get; set; }
         public DbSet<Telemarketer> Telemarketer { get; set; }
-        public DbSet<ContactHistory> ContactHistory { get; set; }
-        public DbSet<Attachment> Attachment { get; set; }
-        public DbSet<MustCallInformation> MustCallInformation { get; set; }
     }
 }
