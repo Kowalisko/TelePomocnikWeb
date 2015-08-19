@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="54f79164e2b14c6aa8dfcb903c3a6541" Name="Diagram1">
+      <Diagram DiagramId="a4e056325b3a4483ad34a0b42a6ea91f" Name="Diagram1">
         <EntityTypeShape EntityType="TelePomocnikDbModel.Company" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
         <EntityTypeShape EntityType="TelePomocnikDbModel.Contact" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
         <EntityTypeShape EntityType="TelePomocnikDbModel.ContactHistory" Width="1.5" PointX="7.5" PointY="3.625" IsExpanded="true" />

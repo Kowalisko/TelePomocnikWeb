@@ -13,10 +13,10 @@ namespace TelePomocnikWeb
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class TelePomocnikDbEntities : DbContext
+    public partial class TelePomocnikDbEntities1 : DbContext
     {
-        public TelePomocnikDbEntities()
-            : base("name=TelePomocnikDbEntities")
+        public TelePomocnikDbEntities1()
+            : base("name=TelePomocnikDbEntities1")
         {
         }
     
