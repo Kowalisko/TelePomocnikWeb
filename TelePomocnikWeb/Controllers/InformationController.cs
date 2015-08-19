@@ -12,7 +12,7 @@ namespace TelePomocnikWeb.Controllers
         {
             TelePomocnikDbEntities1 db = new TelePomocnikDbEntities1();
             DateTime from = DateTime.Now.AddDays(-2);
-            var informations = db.MustCallInformation.Where(m => m.DateMustContact > from).ToList();
+            var informations = db.MustCallInformation.ToList();
             var info = "";
 
             foreach (var item in informations)
